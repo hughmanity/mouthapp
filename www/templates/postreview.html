@@ -1,0 +1,106 @@
+
+<ion-view  title='<img src="./img/i-logo.png">'>
+
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon-round"></button>
+  </ion-nav-buttons>
+      <ion-nav-buttons side="right">
+    <button  class="button button-icon icon ion-search"></button>
+  </ion-nav-buttons>
+<ion-content class="has-header">
+<!--start post review form-->
+    <form ng-submit="postform" class="formcenter">
+<div class="row">
+    <div class="col col-10 postcol">
+<p>Rate It</p>
+    </div>
+    <div class="col">
+<button class="button button-dark icon ion-thumbsup"></button>
+    </div>
+    <div class="col">
+<button class="button button-stable icon ion-thumbsdown"></button>
+    </div>
+    <div class="col col-20 postcol">
+       <p>Add<br>photos</p>
+    </div>
+    <div class="col">
+<button class="button button-stable icon ion-camera" ng-click="showPictures = !showPictures"></button>
+    </div>
+</div>
+<!--Start photo row. this row shows when users adds photos 2 per row and is hidden-->
+        
+       
+<div class="row showPictures" ng-show="showPictures">
+    <div class="col col-50 iconaddress">
+    <div class="postPhotoBox"> 
+    <div class="postPhoto" style="background-image:url('./img/b-photo4.jpg')">
+    <div class="postPhotoClose">  <a href=""><i class="icon ion-close-round"></i></a> 
+</div>
+
+    </div>
+    
+    </div>
+    </div>
+      <div class="col col-50 iconaddress">
+    <div class="postPhotoBox"> 
+    <div class="postPhoto" style="background-image:url('./img/b-photo3.jpg')">
+    <div class="postPhotoClose">  <a href=""><i class="icon ion-close-round"></i></a> 
+    </div>
+
+    </div>
+    
+    </div>
+    </div>
+</div>
+<div class="row rowaddress">
+     <div class="col col-20">
+<button class="button button-stable" ng-click="openAddress()" ng-controller="addressCtrl">Edit</button>
+    </div>
+    <div class="col col-80">
+        <p class="postAddress">555 Lake Street #222<br>
+        Las Vegas, NV 89015 [comes from location]</p>
+
+    </div>
+</div>
+<div class="row">
+<div class="col">
+<div class="list">
+<h5>What are you reviewing?</h5>
+<ion-radio ng-model="posttype">
+Place For Sale
+</ion-radio>
+<ion-radio ng-model="posttype">
+Place For Rent
+</ion-radio>
+<ion-radio ng-model="posttype">
+The Neighborhood
+</ion-radio>
+</div>
+</div>
+</div>
+<div class="row">
+    <div class="col">
+          <label class="item item-input forminput">
+        <input type="text" placeholder="Price (Optional)">
+      </label>
+      <label class="item item-input forminput">
+        <input type="text" placeholder="Review Headline">
+      </label>
+      <label class="item item-input formtextarea">
+        <textarea rows="12" placeholder="Write Review"></textarea>
+      </label>
+    </div>
+</div>
+<div class="row">
+    <div class="col">   
+        <div class="center">
+        <button class="button button-large button-balanced greenbutton">Post Anonymous Review</button>
+        </div>
+    </div>
+</div>
+    
+    </form>
+   
+    </ion-content>
+         
+</ion-view>

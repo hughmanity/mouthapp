@@ -1,0 +1,58 @@
+
+<ion-view  title='<img src="./img/i-logo.png">'>
+
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon-round"></button>
+  </ion-nav-buttons>
+      <ion-nav-buttons side="right">
+    <button  class="button button-icon icon ion-search"></button>
+  </ion-nav-buttons>
+<ion-content class="has-header">
+          
+            <!-- start FilterHomesButton Area-->
+<div ng-hide="FilterHomesButton">
+    <button ng-click="FilterHomesButton=true;ShowFilter=!ShowFilter"class="button button-full button-stable button-small FilterHomesButton">
+       <p class=FilterHomesP>Filter<br><i class=" ion-chevron-down" style="font-size:1.2em;"></i></p>
+    </button>
+</div>
+      <!--end FilterHomesButton Area-->
+    <div class="row">
+        <div class="col">
+        Stream
+        </div>
+    </div>
+    <!--start a home listing 1-->
+<div class="HomeListing">
+        <div class="DetailPhotoBox">
+              
+            <div class="DetailPhoto" style="background-image:url('./img/h-photo1-large.jpg')">          
+              <div class="ForSaleBox">                </div>
+            </div>
+            
+             <!--home listing type For Sale or For Rent box-->
+            </div>
+            <div class="row">
+                <div class="col-10 ceasar-on">
+                <i class="icon ion-thumbsup ceasar-on"></i>
+                </div>
+                <div class="col">
+                <p class="StreamAddress">555 E. Lake Street #519<br>Las Vegas, NV 89015</p>
+                </div>
+            </div>
+            <div class="row RowSpace">
+                <div class="col-10 ceasar-on">
+                </div>
+                <div class="col StreamTime">
+                <span class="StreamTime">25 min. ago</span>
+                    </div>
+                    <div class="col StreamComFav">
+                    <i class="icon ion-chatbox-working comment-off"></i><span class="StreamComFav">25</span><i class="icon ion-ios7-heart fav-off"></i><span class="StreamComFav">25</span>
+                </div>
+            </div>
+  
+    </div>
+    <!--end Home Listing 1-->
+    
+    </ion-content>
+         
+</ion-view>

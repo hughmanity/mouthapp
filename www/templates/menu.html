@@ -1,0 +1,59 @@
+<div class="statusbar-back"></div>
+<ion-side-menus>
+  <ion-pane ion-side-menu-content>
+    <ion-nav-bar class="bar-light nav-title-slide-ios7 mainnav">
+      <ion-nav-back-button class="button-icon icon ion-arrow-left-c">
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent" animation="slide-left-right"></ion-nav-view>
+  </ion-pane>
+
+  <ion-side-menu side="left">
+    <ion-content class="dark">
+        <div class="fade-bar"></div>
+        <div class="red"></div>
+      <ion-list class="list">
+        <ion-item nav-clear menu-close href="#/app/postreview" item-icon-left>
+            <span class="menu-indent-lrg">
+            <i class="icon ion-ios7-compose-outline"></i> 
+          Post Review
+            </span>
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/app/yourreviews" item-icon-left>
+            <span class="menu-indent-lrg">
+            <i class="icon ion-ios7-albums-outline"></i>
+          Your Reviews
+            </span>
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/app/yourfavorites" item-icon-left>
+           <span class=menu-indent-lrg>
+        <i class="icon ion-ios7-heart-outline"></i>
+          Your Favorites
+            </span>
+        </ion-item>
+        <ion-item nav-clear menu-toggle href="#/app/maphome" item-icon-left >
+            <span class="menu-indent-lrg">
+            <i class="icon ion-ios7-location-outline"></i>
+            Map
+            </span>
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/app/home" item-icon-left>
+        <span class="menu-indent-lrg">
+        <i class="icon ion-ios7-home-outline"></i>
+             Home
+        </span>
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/app/playlists">
+         <span class="menu-indent-sml">
+          Your Account
+         </span>
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/app/playlists">
+         <span class="menu-indent-sml">
+          Logout
+        </span>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>
+

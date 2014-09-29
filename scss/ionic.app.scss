@@ -1,0 +1,988 @@
+/*
+To customize the look and feel of Ionic, you can override the variables
+in ionic's _variables.scss file.
+
+For example, you might change some of the default colors:
+
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #4a87ee !default;
+$calm:                            #43cee6 !default;
+$balanced:                        #66cc33 !default;
+$energized:                       #f0b840 !default;
+$assertive:                       #ef4e3a !default;
+$royal:                           #8a6de9 !default;
+$dark:                            #444 !default;
+*/
+
+/*the base background color of off-white*/
+$base-background-color:           #f4f3f3 !default;
+$dark:                            #494847  !default;
+$stable:                          #f4f3f3 !default;
+$light:                           #f4f3f3 !default;
+$button-light-border:            #494847 !default;
+$button-stable-bg:                #e3e3e3 !default;
+$button-stable-border:            #494847 !default;
+$button-stable-active-bg:         #c1c0c0   !default;
+$button-stable-active-border:     #494847 !default;
+$button-stable-text:              #494847 !default;
+
+//base for the cards
+$card-header-bg:                  #f4f3f3 !default;
+$card-body-bg:                    #000 !important;
+$card-footer-bg:                  #F5F5F5 !default;
+
+$card-padding:                    10px !default;
+$card-border-width:               1px !default;
+
+$card-border-color:               #ccc !default;
+$card-border-radius:              2px !default;
+
+
+// The path for our ionicons font files, relative to the built CSS in www/css
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+$font-family-sans-serif:          "Nunito", Helvetica, Arial, "Lucida Grande", sans-serif !default;
+$font-family-light-sans-serif:    "Nunito", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif !default;
+
+
+// Include all of Ionic
+@import "www/lib/ionic/scss/ionic";
+/* latin */
+
+//Set up the base fonts for the app which is a google font Nunito. Nunito has two weights 300 for regular text and 400 for bold. Make sure to remove any strong or bold references to H tags and replace with 400 weight if needed
+@font-face {
+    font-family: 'Nunito' !important;
+    font-style: normal !important;
+    font-weight: 300 !important;
+    src: local('Nunito-Light'), //url(http://fonts.gstatic.com/s/nunito/v6/1TiHc9yag0wq3lDO9cw0vpBw1xU1rKptJj_0jans920.woff2) format('woff2'),
+url(../lib/ionic/fonts/Nunito-Light.ttf) format('truetype');
+
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000 !important;
+}
+/* latin */
+
+@font-face {
+    font-family: 'Nunito' !important;
+    font-style: normal !important;
+    font-weight: 400;
+    src: local('Nunito-Regular'), url(http://fonts.gstatic.com/s/nunito/v6/6TbRXKWJjpj6V2v_WyRbMevvDin1pK8aKteLpeZ5c0A.woff2) format('woff2'),
+url(../lib/ionic/fonts/Nunito-Regular.ttf) format('truetype');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000 !important;
+
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  color: #363433;
+  font-weight: 400;
+  font-family:  "Nunito" !important;
+  line-height: 1.2; }
+  h1 small, h2 small, h3 small, h4 small, h5 small, h6 small, .h1 small, .h2 small, .h3 small, .h4 small, .h5 small, .h6 small {
+    font-weight: 300;
+    line-height: 1;
+ }
+
+//for setting all font sizes in ems to be pixels with body at 62% and to set all elements to nunito
+body {
+    font-size: 62%;
+    font-weight:300;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 1.875em;
+}
+
+.row .col {
+    font-size:1.4em;
+    padding-left:.8em;
+    padding-right:.8em;
+}
+
+//Top Menu Design which includes the closing and opening of the submenu for filtering between for sale, for rent and all properties. All properties should be the main
+
+//FilterHomesButton makes sure that the Filter and the carrot are shown correctly
+ .FilterHomesButton {
+margin:0px !important;
+height:35px;
+border-top:none;
+border-bottom-style:solid;
+border-bottom-width:.1em;
+border-bottom-color:#494847 !important;
+}
+ .FilterButtonClose {
+margin:0 !important;
+height:35px;
+border-top:none;
+border-bottom-style:solid;
+border-bottom-width:.1em;
+border-top-style:solid;
+border-top-width:.1em;
+border-color:#494847;
+}
+.mainnav {
+    background-image:linear-gradient(0deg,#f4f3f3,#f4f3f3 50%,transparent 100%)!important;
+    border-bottom:solid;
+    border-bottom-width:1px;
+    border-bottom-color:#494847;
+
+}
+.FilterHomesP {
+font-weight:300; font-size: 1em; padding-top:4px;line-height:1em
+}
+//ShowFilter sets the white background for the ShowFilter Area
+.ShowFilter {
+padding-top:13px;
+padding-bottom: 13px;
+background-color:#ffffff;
+}
+//ShowFilterMax makes sure that the filter buttons stay a maximum width on larger screens
+.ShowFilterMax {
+max-width:412px;
+}
+
+//SIDE MENU DESIGN
+
+/*dark is class added to ion-content, since ion-conte*/
+/*is made up of multiple pieces and is a pain to style each*/
+
+/*Ion-item adds item-complex and an inner div, .item-content*/
+/* this needs to be transparent too, but doesnt need borders*/
+
+//top of side menu and other items where red bar is needed
+.red {
+        background-color: #e72213 !important;
+        height: 8px;
+        position:relative;
+        z-index:200;
+}
+.fade-bar {
+        background-color: #eaeaea  !important;
+        height:20px;
+
+}
+.dark .item-complex .item-content, dark.item-radio .item-content {
+  background-color: transparent;
+}
+
+.dark {
+    background-color:#696666;
+/*Set the background to transparent for ion-item*/
+}
+
+.dark .item {
+  background-color: transparent;
+  border: none;
+  color: #eaeaea;
+  font-size:1.9em;
+  line-height:1.75em;
+}
+
+//indent the items so active can change color without being indented
+.dark .menu-indent-lrg {
+    margin-left:1.25em;
+}
+
+.dark .menu-indent-sml {
+    margin-left:5.5em;
+}
+
+/*Just makes the type white*/
+.dark h2,
+.dark h3,
+.dark p,
+.dark a {
+  color: #F0F1F1;
+}
+
+//change background color of button-stable used for open close button
+
+//the next is for the background color of tapped row
+.dark .item-content:activated {
+  background-color: #494847  !important;
+}
+.dark .item-content:hover {
+  background-color: #494847  !important;
+}
+
+
+//changes the margin on the bottom of the last big ite,
+.dark .item:nth-child(5){
+  padding-bottom:1em;
+}
+
+/*Changes the border for the last item*/
+.dark .item:nth-child(6){
+    border-top: 1px solid #eaeaea;
+    font-size:1.3em;
+    padding-top:.5em;
+}
+
+.dark .item:nth-child(7){
+    font-size:1.3em;
+
+}
+
+//change the size of the icons for side menus and default for all
+i {
+    font-size:1.7em;
+    margin-right: .2em;
+}
+
+//=======================
+
+//Stream (Home screen, and search results stream css
+.StreamPhoto {
+    min-height:144px;
+    background-size:100% auto;
+    background-repeat:no-repeat;
+    background-position:center;
+    position:relative;
+
+}
+.StreamPhotoBox {
+    height:144px;
+    width:100%;
+    background:#494847; 
+}
+
+//RowSpace just adds space betwen listings in the stream.
+
+.RowSpace {
+    margin-bottom:1.5em;
+}
+
+//Ceaser Icon Colors and placement and the address under stream etc.
+
+.ceasar-on {
+    color:#979696  !important;
+    font-size:1.8em !important;
+    text-align:right;
+    max-width:2.5em;
+    margin-top:2px;
+}
+
+.StreamAddress {
+    font-size:1em;
+    text-align:left;
+    line-height: 1.3!important;
+}
+
+.StreamTime {
+    margin-top:-15px;
+    font-size:.95em;
+    color:#979696 !important;
+    text-align:left !important;
+}
+.StreamComFav {
+    margin-top:-15px;
+    font-size:.95em;
+    color:#979696 !important;
+    text-align:right;
+    margin-right:5px;
+}
+
+//this is the standard chat color unless it's pressed and user is reading comments
+.comment-off {
+    color:#979696 !important;
+    vertical-align:middle;
+}
+
+
+
+//this is the purple pressed chat color when user is reading comments or presses on chat in a review to read the comments
+.comment-on {
+    color:#a186be !important;
+    vertical-align:middle;
+}
+
+//this is the standard fav color unless it's pressed and user is reading comments
+.fav-off {
+    color:#979696 !important;
+    vertical-align:middle;
+
+}
+
+//this is the purple pressed chat color when user is reading comments or presses on chat in a review to read the comments
+.fav-on {
+    color:#e72213 !important;
+    vertical-align:middle;
+
+}
+
+//home listing box type For Sale or For Rent
+.ForSaleBox
+    { width: 6em; height: 1.5em; background:#598527; color:#ffffff;line-height:1.6em;text-align:center;font-size:1.4em;font-weight:400; position:absolute;bottom:0;right:0;z-index:9999;
+}
+//The following sets the text to "For Sale" for ForSaleBox automatically
+.ForSaleBox:before {
+    content: "FOR SALE";
+}
+
+.ForSaleBoxCard
+    { width: 6em; height: 1.5em; background:#598527; color:#ffffff;line-height:1.6em;text-align:center;font-size:1em;font-weight:400; position:absolute;bottom:0;right:0;z-index:9999;
+}
+//The following sets the text to "For Sale" for ForSaleBox automatically
+.ForSaleBoxCard:before {
+    content: "FOR SALE";
+}
+
+.ForRentBoxCard
+    { width: 6em; height: 1.5em; background:#a186be; color:#ffffff;line-height:1.6em;text-align:center;font-size:1em;font-weight:400; position:absolute;bottom:0;right:0;
+}
+.ForRentBoxCard:before {
+    content: "FOR RENT";
+}
+
+.ForRentBox
+    { width: 6em; height: 1.5em; background:#a186be; color:#ffffff;line-height:1.6em;text-align:center;font-size:1.4em;font-weight:400; position:absolute;bottom:0;right:0;
+}
+.ForRentBox:before {
+    content: "FOR RENT";
+}
+
+
+//DETAIL REVIEW CSS - the following is for the detail review page 
+
+.DetailPhoto {
+    min-height:250px;
+    background-size:100% auto;
+    background-repeat:no-repeat;
+    background-position:center;
+
+}
+.DetailPhotoBox {
+    height:250px;
+    width:100%;
+    background:#494847;
+    position:relative;
+}
+
+.DetailPhotoCard {
+    min-height:200px;
+    background-size:100% auto;
+    background-repeat:no-repeat;
+    background-position:center;
+
+}
+.DetailPhotoBoxCard {
+    height:200px;
+    width:100%;
+    background:#494847;
+    position:relative;
+}
+
+.DetailAddress {
+    font-size:1em;
+    line-height: 1.3!important;
+}
+
+.DetailTime {
+    font-size:1em !important;
+    color:#979696 !important;
+}
+.DetailComFav {
+    font-size:.95em;
+    color:#979696 !important;
+}
+//pagerow sets the page 1 of 2 row to tighten up the leading
+.pagerow {
+    text-align:right !important;
+    height:2.4em;
+}
+
+//icon row is for the detail page and sets the white column the padding on the right is to compensate for the # of comments etc. the icon column sets the vert. alignment to be more centered.
+.iconrow {
+    border-top-style:solid;
+    border-top-width:1px;
+    border-bottom-style:solid;
+    border-bottom-width:1px;
+    background-color:#ffffff;
+    text-align:center;
+    width:95%;
+    margin:auto;
+}
+
+
+.iconcol {
+margin-top:.3em;
+}
+
+.iconcol a:link{
+color:#979696 !important;
+margin-top:.3em;
+vertical-align:middle;
+
+}
+.iconcol a:visited
+{color:#979696 !important;
+ margin-top:.3em;
+ vertical-align:middle;
+
+}
+.iconcol a:hover{
+color:#494847 !important;
+margin-top:.3em;
+vertical-align:middle;
+
+}
+.iconcol a:active{
+color:#494847 !important;
+margin-top:.3em;
+vertical-align:middle;
+
+}
+
+//detail icon sets the size of teh fonts on the detail page
+.detail-icon {
+    font-size:2.2em;
+        vertical-align:middle;
+
+}
+    
+//the following fonts are for styling the actual review the title which is an h2 tag and teh body text
+.coltitle {
+padding:1em !important;
+padding-top:1.5em !important;
+}
+.coldesc  {
+    padding:.3em !important;
+
+    margin-top:-1.6em !important;
+    font-size:1.1em !important;
+    line-height:1.3em !important;
+    border-bottom-style:solid;
+border-bottom-width:.1em;
+border-bottom-color:#494847;
+}
+
+//css for the card section
+.pagerowcard {
+  text-align: right !important;
+  height: 1.8em;
+  font-size:1.4em;
+margin-top:-1em;}
+
+.card-header-bg {
+   background-color: blue !important;
+}
+
+.card .slider-pager {
+  position: absolute;
+  bottom: 20px;
+  z-index: $z-index-slider-pager;
+  width: 100%;
+  height: 15px;
+  text-align: center;
+
+  .slider-pager-page {
+    display: inline-block;
+    margin: 0px 3px;
+    width: 15px;
+    color: #000;
+    text-decoration: none;
+    font-size:.7em !important;
+
+    opacity: 0.3;
+
+    &.active {
+      @include transition(opacity 0.4s ease-in);
+      opacity: 1;
+    }
+  }
+}
+
+
+.carddesc  {
+    padding:.3em !important;
+
+    margin-top:-1.6em !important;
+    font-size:1.1em !important;
+    line-height:1.3em !important;
+   
+}
+
+//css for comments and favorite links on the REVIEW DETAIL page
+
+// this defines the height of the statusbar for ios. if status bar sets height to ios statusbar height as determined by ionic. starts out at 0 so it doesn't show up on other platforms
+
+
+.comments {
+margin-top:.3em;
+vertical-align:middle;
+}
+.comments a:link{
+color:#979696 !important;
+margin-top:.3em;
+vertical-align:middle;
+
+}
+.comments a:visited
+{color:#979696 !important;
+ margin-top:.3em;
+ vertical-align:middle;
+
+}
+.comments a:hover{
+color:#a186be !important;
+margin-top:.3em;
+vertical-align:middle;
+
+}
+.comments a:active{
+color:#a186be !important;
+margin-top:.3em;
+vertical-align:middle;
+
+}
+
+//css for the COMMENT DETAIL page
+//modal-spacer sets a div on top if the platform is ios so it pushes down for the statusbar
+.modal-top {
+    height:0px !important;
+    background-color:#f4f3f3 !important;
+}
+
+.rowclose {
+background-color:#b4b3b3;
+text-align:right;
+color:#eaeaea;
+margin:0;
+padding:0;
+position:relative;
+z-index:200;
+vertical-align:middle;
+
+}
+.iconclose {
+font-size:2em;
+    margin:0;
+    padding:0;
+    vertical-align:middle;
+
+}
+
+//start close module link comments for modal comments
+.rowclose a:link{
+color:#ffffff !important;
+vertical-align:middle;
+
+
+}
+.rowclose a:visited
+{color:#ffffff !important;
+ vertical-align:middle;
+
+}
+.rowclose a:hover{
+color:#494847  !important;
+vertical-align:middle;
+
+}
+.rowclose a:active{
+color:#494847  !important;
+vertical-align:middle;
+
+}
+
+//end close module link comments for modal comments
+
+.row-comment-icons {
+    text-align:center;
+    width:95%;
+    margin:auto;
+    margin-top:0px !important;
+    margin-left:auto;
+    margin-right:0;
+    max-width:500px;
+}
+
+.commentText {
+    font-size:1.1em;
+    line-height:1.3em;
+    padding-right:1em;
+}
+
+.comment-footer {
+    background-color:#b4b3b3;
+    //bottom:180px;
+}
+
+.comment-button {
+    background-color:#ffffff;
+}
+
+.comment-centered {
+    max-width:500px !important;//reset this when closer
+    margin: 0 auto;
+    
+}
+
+//start SHARE modal - .modal-backdrop is the ionic basic background for modals 
+.modal-backdrop2 {
+  -webkit-transition: background-color 300ms ease-in-out;
+  -moz-transition: background-color 300ms ease-in-out;
+  transition: background-color 300ms ease-in-out;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  z-index:10;
+  width: 250px !important;
+  height: 500px !important;
+  margin-left: -125px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.modal2 {
+  display: block;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  overflow: hidden;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.redshare {
+    height:3px;
+}
+.shareback {
+background-color:#0180b0;
+position:relative;
+}
+
+.sharehead {
+    font-size:1.8em !important;
+    color: #f4f3f3;
+    text-align:left;
+    margin-top:.2em;
+}
+
+.sharelink {
+    margin-top:3em;
+    color: #f4f3f3;
+    text-decoration:none !important;
+    font-size:1.5em;
+}
+.sharereport {
+    font-size:1em !important;
+    color: #f4f3f3 ;
+    margin-top:3.2em;
+    padding-bottom:1.25em;
+    text-decoration:none !important;
+
+}   
+.sharehead.sharelink.sharereport a:link{
+color:#f4f3f3 !important;
+vertical-align:middle;
+text-decoration:none !important;
+}
+.sharehead.sharelink.sharereport a:visited
+{color:#ffffff !important;
+ vertical-align:middle;
+text-decoration:none !important;
+
+}
+.sharerow :hover{
+background-color:#0b749c  !important;
+padding:0;
+margin:0;
+width:100%;
+
+}
+.sharerow :active{
+background-color:#0b749c   !important;
+
+}
+
+//end share styles
+
+//START post review styles
+
+// start photo thumbnails for when a user adds a photo
+
+.postPhoto {
+    min-height:144px;
+    background-size:auto 100%;
+    background-repeat:no-repeat;
+    background-position:center;
+    position:relative;
+    border-style:solid;
+    border-color:#494847;
+    border-width:1px;
+   
+
+}
+.postPhotoBox {
+    height:144px;
+    width:100%;
+    background:#494847;  
+}
+
+.postPhotoClose
+    {
+    width: 2em;
+    height: 2em;
+    background:#494847;
+    color:#ffffff;
+    line-height:1.6em;
+    text-align:center;
+    font-weight:300;
+    position:absolute;
+    top:0;
+    right:0;
+    z-index:9999;
+    margin-right:0px;
+    padding-left:.2em;
+    padding-top: .1em;
+}
+
+//end photo thumbnails
+
+
+.formcenter {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width:95%;
+    margin-top:.4em !important;
+}
+//postcol is for the "ceasar it" and "Add Photos"
+.postcol {
+    text-align:right !important;
+    margin:0 !important;
+    padding:0 !important;
+    margin-top:.6em !important;
+}
+
+//rowaddress adds space around the address and postAddress sets it to vertically align with text button and set the line heigh
+
+.rowaddress{
+    margin-top:1em !important;
+}
+
+.postAddress {
+    margin-top:.4em;
+    font-size:1em;
+    line-height: 1.3!important;
+}
+.forminsert {
+    margin:0 !important;
+    padding:0;
+}
+
+
+.forminput {
+    margin-bottom: .8em !important;
+    background-color:#fff !important;
+    height:3em !important;
+    padding:0 25 !important;
+    }
+
+.formtextarea {
+    background-color:#fff !important;
+    margin-bottom:10px;
+    padding:0 25 !important;
+}
+
+  &:checked ~ .item-content {
+    /* style the item content when its checked */
+    background: #0aaf5a    !important;
+    color:#ffffff !important;
+  }
+.greenbutton {
+background-color:#0aaf5a !important;
+margin-top:-.5em;
+margin-bottom:.5em;
+}
+.purplebutton {
+background-color:#a186be !important;
+margin-top:-.9em;
+border-color:#9069bb !important;
+}
+    
+
+.center{
+  display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+*::-webkit-input-placeholder {
+    font-size:1em;
+    text-align:left;
+    margin-top:2em !important;
+        padding-top:5px !important
+
+}
+*:-moz-placeholder {
+    font-size:1.2em;
+    text-align:left !important;
+        padding:0 !important;
+        padding-top:.5em !important;
+
+
+
+}
+*:-ms-input-placeholder { /* IE10+ */
+    font-size:1.2em;
+    text-align:left;
+        padding:0 !important;
+    padding-top:25px !important
+
+
+}
+input {
+    font-size:1.2em !important;
+    font-weight:300 !important;
+    margin:0 !important;
+    padding:0 !important;
+
+}
+textarea {
+    font-size:1.2em !important;
+    padding-top:.5em;
+    font-weight:300 !important;
+}
+
+//edit address form
+//START post review styles
+
+//start SHARE modal - .modal-backdrop is the ionic basic background for modals 
+.modal-backdrop3 {
+  -webkit-transition: background-color 300ms ease-in-out;
+  -moz-transition: background-color 300ms ease-in-out;
+  transition: background-color 300ms ease-in-out;
+  position: absolute;
+  top: 6%;
+  left: 50%;
+  z-index:10;
+  width: 350px !important;
+  height: 800px !important;
+  margin-left: -175px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.modal-backdrop3 .modal {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.modal-backdrop3 .center {
+    margin-top:-1.2em !important;
+}
+
+.modal-backdrop3 .greenbutton {
+    width:100% !important;
+}
+
+.modal-backdrop3 .col{
+    margin-top: -.5em !important;
+    
+}
+
+.modal-backdrop3 .rowaddress{
+    color:#eaeaea;
+    font-size:1.2em;
+    margin-left:1.5em;
+}
+
+.addressback {
+background-color:#696666;
+position:relative;
+}
+
+.addresshead {
+    font-size:1.8em !important;
+    color: #f4f3f3;
+    text-align:left;
+    margin-top:.2em;
+}
+
+.addresslink {
+    margin-top:3em;
+    color: #f4f3f3;
+    text-decoration:none !important;
+    font-size:1.5em;
+}
+
+.lightext {
+    color:#eaeaea;
+    font-size:1.2em !important;
+    text-align:left;
+    margin-top:.8em;
+}
+
+
+.iconaddress{
+    text-align:right !important;
+    font-size:1.9em !important;
+    padding-top:.5em !important;
+        
+}
+
+//start close module link comments for modal comments
+.iconaddress a:link{
+color:#eaeaea !important;
+vertical-align:middle;
+
+
+}
+.iconaddress a:visited
+{color:#eaeaea !important;
+ vertical-align:middle;
+
+}
+.iconaddress a:hover{
+color:#494847  !important;
+vertical-align:middle;
+
+}
+.iconaddress a:active{
+color:#494847  !important;
+vertical-align:middle;
+
+}
+
+.modal-backdrop3  .item{
+    background-color: rgba(0, 0, 0, 0);
+    color:#eaeaea;
+    font-weight:300;
+    border:none;
+    margin-bottom:-1em;
+}
+
+//map home.two maps in app. one shows everything around you at your current location, whihc is the map in the navigation. the second is from teh homes detail page which shows everything around the review's address
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+.scroll {
+  height: 100%;
+}

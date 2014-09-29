@@ -1,0 +1,80 @@
+ <ion-content class="modal-backdrop3"> 
+<ion-modal-view>
+<div class="addressback">
+    <div class="red"></div>
+<!--start edit address form-->
+    <form ng-submit="postform" class="formcenter">
+<div class="row">
+    <div class="col col-20">
+<button class="button button-stable icon ion-navigate"></button>
+    </div>
+    <div class="col col-67">
+       <p class="lightext">Refresh Location</p>
+    </div>
+    <div class="col iconaddress">
+            <a href=""  ng-click="closeAddress()">
+    <i class="icon ion-close-round"></i>
+                    </a>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+    <ion-checkbox class="checkbox checkbox-light" ng-model="isChecked">Check to use location</ion-checkbox>
+    </div>
+</div>
+<div class="row rowaddress">
+    <div class="col">
+        <p>555 Lake Street #222<br>
+        Las Vegas, NV 89015 [comes from location]</p>
+    </div>
+</div>
+<div class="list">
+    <div class="row">
+        <div class="col">
+            <label class="item item-input forminput">
+    <input type="text" placeholder="Street">
+  </label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <label class="item item-input forminput">
+    <input type="text" placeholder="# (Optional)">
+  </label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <label class="item item-input forminput">
+    <input type="text" placeholder="City">
+  </label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col col-25">
+        <label class="item item-input forminput">
+        <input type="text" placeholder="St">
+      </label>
+        </div>
+        <div class="col col-75">
+        <label class="item item-input forminput">
+        <input type="text" placeholder="Zip">
+      </label>
+        </div>
+    </div>
+  
+</div>
+        <div class="row">
+            <div class="col">
+            <div class="center">
+    <button class="button button-large button-balanced greenbutton">Save Address</button>
+            </div>
+            </div>
+        </div>
+    </form>
+    </div>
+
+    </ion-modal-view>
+   </ion-content>
+
+

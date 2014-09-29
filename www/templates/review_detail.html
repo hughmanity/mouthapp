@@ -1,0 +1,90 @@
+
+<ion-view  title='<img src="./img/i-logo.png">'>
+
+
+      <ion-nav-buttons side="right">
+    <button  class="button button-icon icon ion-search"></button>
+  </ion-nav-buttons>
+<ion-content class="has-header">
+          
+    <!--start a home listing 1-->
+<div class="HomeListing">
+            <!--Section Photo-->
+    <div  ng-controller="slideDetail">
+        <div class="DetailPhotoBox">  
+        <!--start slides of photos for this property-->
+        <ion-slide-box does-continue="true">
+            <ion-slide  on-swipe="nextSlide()">
+                <div class="DetailPhoto" style="background-image:url('./img/h-photo1-large.jpg')">          
+                </div>
+            </ion-slide>
+            <ion-slide  on-swipe="nextSlide()">
+                <div class="DetailPhoto" style="background-image:url('./img/h-photo1b.jpg')">          
+                </div>
+            </ion-slide>
+        </ion-slide-box>
+        <!--keep the ForSaleBox and ForRentBox out of slides so it doesn't slide with photos--->
+              <div class="ForSaleBox"></div>
+        </div>
+    </div>
+    <!--end Section Photo-->
+            <div class="row pagerow">
+            <div class="col">
+            1 of 2
+            </div>
+            </div>
+            <div class="row">
+                <div class="col col-10 ceasar-on">
+                <i class="icon ion-thumbsup ceasar-on"></i>
+                </div>
+                <div class="col">
+                <p class="DetailAddress">555 East Lake Street #519<br>Las Vegas, NV 89015</p>
+                </div>
+            </div>
+            <div class="row iconrow">
+                <div class="col iconcol">
+                <a href="#/app/mapthis">
+                <i class="icon ion-ios7-location detail-icon"></i>
+                </a>
+                </div>
+                <div class="col iconcol">
+                 <a href="" ng-click="openShare()" ng-controller="shareCtrl">
+    <i class="icon ion-more detail-icon"></i>                                   </a>
+ </div>
+                <div class="col comments" >
+                <a href="">
+                <i class="icon ion-chatbox-working detail-icon"  ng-click="openComments()"></i></a><span class="DetailComFav">13</span>
+                </div>
+                <div class="col iconcol">
+                <i class="icon ion-ios7-heart detail-icon fav-on"></i><span class="DetailComFav">144</span>
+                </div>
+            </div>
+<!--Start Title and Home Review-->
+            <div class="row">
+                <div class="col coltitle">
+                <h2>Amazing Kitchen</h2>
+                </div>
+            </div>
+            <div class="row">
+                 <div class="col">
+                <div class="coldesc">
+                <p>This house is super nice. You can tell they take great care of it and that the kitchen was updated recently.</p>
+                      <p>This is the second paragraph of the description.</p>
+                </div>
+                 </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                <span class="DetailTime">25 min. ago</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col comments">
+                <p><a href="" ng-click="openComments()" ng-controller="AppCtrl"><i class="comments ion-chatbox-working detail-icon"></i></a>Read more/write your own</p>
+                </div>
+            </div>
+    <!--end Home Listing 1-->
+
+</ion-content>
+
+</ion-view>

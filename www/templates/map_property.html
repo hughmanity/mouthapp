@@ -1,0 +1,54 @@
+
+<ion-view  title='<img src="./img/i-logo.png">'>
+
+  <ion-nav-buttons side="left">
+   </button>
+  </ion-nav-buttons>
+      <ion-nav-buttons side="right">
+    <button  class="button button-icon icon ion-search"></button>
+  </ion-nav-buttons>
+<ion-content class="has-header has-footer" ng-controller="MapCtrl">
+          <!--this is the ShowFilter Area that is hidden by default-->
+<div  ng-show="ShowFilter">
+<div class="row ShowFilter">
+  <div class="col col-5"></div>
+  <div class="col col-90 ShowFilterMax">
+    <div class="button-bar">
+  <a class="button button-outline button dark button-small">For Sale</a>
+  <a class="button button-outline button-dark button-small">Rentals</a>
+  <a class="button button-outline button-dark button-small activated">All</a>
+</div>
+    </div>
+      <div class="col col-5"></div>
+</div>
+      <!--end sort button div-->
+      <!--close button which is below the ShowFilterArea and closes ShowFilterArea and Shows the FilterHomesButton Area-->
+<div id="filter-button-close">
+    <button ng-click="FilterHomesButton=false;ShowFilter=!ShowFilter" class="button button-full button-stable button-small FilterButtonClose" >
+        <i class="icon ion-chevron-up"></i>
+    </button>
+</div>
+      <!--end close button-->
+</div><!--end of the Showfilter Area-->
+            <!-- start FilterHomesButton Area-->
+<div ng-hide="FilterHomesButton">
+    <button ng-click="FilterHomesButton=true;ShowFilter=!ShowFilter"class="button button-full button-stable button-small FilterHomesButton">
+       <p class=FilterHomesP>Filter<br><i class=" ion-chevron-down" style="font-size:1.2em;"></i></p>
+    </button>
+</div>
+      <!--end FilterHomesButton Area-->
+
+    <!--start map from navigation-->
+    <div id="map" data-tap-disable="true" >
+            </div>
+</div>
+            </ion-content>
+
+          <ion-footer-bar class="bar-dark">
+      <a ng-click="centerOnMe()" class="button button-icon icon ion-navigate">Property Map (footer probably deleted)</a>
+    </ion-footer-bar>
+
+
+    <!--end Home Listing 3-->
+         
+</ion-view>

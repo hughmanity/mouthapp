@@ -1,0 +1,116 @@
+<ion-view  title='<img src="./img/i-logo.png">'>
+
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon-round"></button>
+  </ion-nav-buttons>
+      <ion-nav-buttons side="right">
+    <button  class="button button-icon icon ion-search"></button>
+  </ion-nav-buttons>
+<ion-content class="has-header">
+          <!--this is the ShowFilter Area that is hidden by default-->
+<div  ng-show="ShowFilter">
+<div class="row ShowFilter">
+  <div class="col col-5"></div>
+  <div class="col col-90 ShowFilterMax">
+    <div class="button-bar">
+  <a class="button button-outline button dark button-small">For Sale</a>
+  <a class="button button-outline button-dark button-small">Rentals</a>
+  <a class="button button-outline button-dark button-small activated">All</a>
+</div>
+    </div>
+      <div class="col col-5"></div>
+</div>
+      <!--end sort button div-->
+      <!--close button which is below the ShowFilterArea and closes ShowFilterArea and Shows the FilterHomesButton Area-->
+<div id="filter-button-close">
+    <button ng-click="FilterHomesButton=false;ShowFilter=!ShowFilter;" class="button button-full button-stable button-small FilterButtonClose" >
+        <i class="icon ion-chevron-up"></i>
+    </button>
+</div>
+      <!--end close button-->
+</div><!--end of the Showfilter Area-->
+            <!-- start FilterHomesButton Area-->
+<div ng-hide="FilterHomesButton">
+    <button ng-click="FilterHomesButton=true;ShowFilter=!ShowFilter"class="button button-full button-stable button-small FilterHomesButton">
+       <p class=FilterHomesP>Filter<br><i class=" ion-chevron-down" style="font-size:1.2em;"></i></p>
+    </button>
+</div>
+      <!--end FilterHomesButton Area-->
+    
+<div class="card" >
+
+  <div class="item item-text-wrap" style="margin-left:0,padding-left:0">
+<div class="row" style="margin-left:0,padding:0">
+<div class="col col-10 ceasar-off"style="margin-left:0,padding:0">
+                <i class="icon ion-thumbsdown"></i>
+                </div>
+                 <div class="col">
+                <h2>Hang-on a sec, I'm on the Throne</h2>
+                </div>
+            </div>
+    </div>
+
+  <div class="item item-body">
+     <!--Section Photo-->
+    <div  ng-controller="slideDetail">
+        <div class="DetailPhotoBoxCard"><a href="#/app/detail">
+        <!--start slides of photos for this property-->
+        <ion-slide-box does-continue="true">
+            <ion-slide  on-swipe="nextSlide()">
+                <div class="DetailPhotoCard" style="background-image:url('./img/b-photo2.jpg')">          
+                </div>
+            </ion-slide>
+            <ion-slide  on-swipe="nextSlide()">
+                <div class="DetailPhotoCard" style="background-image:url('./img/b-photo1.jpg')">          
+                </div>
+            </ion-slide>
+        </ion-slide-box>
+        <!--keep the ForSaleBox and ForRentBox out of slides so it doesn't slide with photos--->
+              <div class="ForSaleBoxCard"></div>
+        </div>
+    </a>  
+    </div>
+    <!--end Section Photo-->
+        <div class="row pagerowcard">
+            <div class="col">
+            <p>1 of 2</p>
+            </div>
+            </div>
+          <div class="row">
+                <div class="cardcol">
+                <p>Never keep a visitor waiting again just because nature calls. This listing’s second bath. I’ll pass!</p>
+                </div>
+            </div>
+                <div class="row">
+                <div class="cardcol">
+                <a href="#/app/detail"><p>Details</p></a>
+                </div>
+            </div>
+                <div>
+                <p class="subdued">25 min. ago</p>
+                </div>
+  </div>
+
+  <div class="item tabs tabs-secondary tabs-icon-left">
+    <a class="tab-item" href="" ng-click="openShare()" ng-controller="shareCtrl">
+      <i class="icon ion-more"></i>
+      Share
+    </a>
+    <a class="tab-item" href="" ng-click="openComments()">
+      <i class="ion-chatbox-working"></i>
+      144
+    </a>
+    <a class="tab-item" href="">
+      <i class="icon ion-ios7-heart"></i>
+      25
+    </a>
+  </div>
+
+</div>
+    <div class="row">
+    <div class="col">
+        <p>1 of 34 results</p>
+    </div>
+    </div>
+    </ion-content>
+    </ion-view>
