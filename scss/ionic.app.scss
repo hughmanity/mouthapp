@@ -794,11 +794,13 @@ background-color:#0b749c   !important;
 background-color:#0aaf5a !important;
 margin-top:-.5em;
 margin-bottom:.5em;
+min-width:300px;
 }
 .purplebutton {
 background-color:#a186be !important;
 margin-top:-.9em;
 border-color:#9069bb !important;
+color:#fff;
 }
     
 
@@ -985,4 +987,25 @@ vertical-align:middle;
 
 .scroll {
   height: 100%;
+}
+
+//account screens
+
+.colaccounthead h2 {
+    text-align:center;
+    margin-top:1em;
+}
+.colaccounthead h3 {
+    text-align:center;
+    font-size:1.4em;
+}
+.colaccounthead p {
+    text-align:center;
+    font-size:1.2em;
+    padding-left:1.5em;
+    padding-right:1.5em;
+}
+
+.errormessage {
+    color:#e72213 
 }

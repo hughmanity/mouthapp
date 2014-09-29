@@ -8410,12 +8410,14 @@ i {
 .greenbutton {
   background-color: #0aaf5a !important;
   margin-top: -0.5em;
-  margin-bottom: 0.5em; }
+  margin-bottom: 0.5em;
+  min-width: 300px; }
 
 .purplebutton {
   background-color: #a186be !important;
   margin-top: -0.9em;
-  border-color: #9069bb !important; }
+  border-color: #9069bb !important;
+  color: #fff; }
 
 .center {
   display: -webkit-box;
@@ -8563,3 +8565,20 @@ textarea {
 
 .scroll {
   height: 100%; }
+
+.colaccounthead h2 {
+  text-align: center;
+  margin-top: 1em; }
+
+.colaccounthead h3 {
+  text-align: center;
+  font-size: 1.4em; }
+
+.colaccounthead p {
+  text-align: center;
+  font-size: 1.2em;
+  padding-left: 1.5em;
+  padding-right: 1.5em; }
+
+.errormessage {
+  color: #e72213; }

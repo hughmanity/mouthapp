@@ -27,6 +27,32 @@ angular.module('housemouth', ['ionic','ngCordova','starter.controllers'])
       }
     })
   
+       .state('app.account', {
+      url: "/account",
+      views: {
+        'menuContent' :{
+          templateUrl: "templates/createaccount.html"
+        }
+      }
+    })
+  
+     .state('app.login', {
+      url: "/login",
+      views: {
+        'menuContent' :{
+          templateUrl: "templates/login.html"
+        }
+      }
+    })
+       .state('app.accountsuccess', {
+      url: "/accountsuccess",
+      views: {
+        'menuContent' :{
+          templateUrl: "templates/accountsuccess.html"
+        }
+      }
+    })
+  
      .state('app.detail', {
       url: "/detail",
       views: {
