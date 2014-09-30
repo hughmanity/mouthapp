@@ -44,6 +44,26 @@ angular.module('starter.controllers', ['ionic'])
 
 })
 
+.controller('searchCtrl', function($scope, $ionicModal) {    
+
+  // Create the  modal that we will use later
+  $ionicModal.fromTemplateUrl('templates/m_search.html', {
+    scope: $scope
+  }).then(function(modal) {
+    $scope.modal = modal;
+  });
+
+  // Triggered in the login modal to close it
+  $scope.closeSearch = function() {
+    $scope.modal.hide();
+  };
+
+  // Open the login modal
+  $scope.openSearch = function() {
+    $scope.modal.show();
+  };
+
+})
 .controller('addressCtrl', function($scope, $ionicModal) {    
 
   // Create the  modal that we will use later
